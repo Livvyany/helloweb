@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入自定義 css 文件 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- 引入 Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- 引入 RGBELoader -->
+    <script src="https://threejs.org/examples/js/loaders/RGBELoader.js"></script>
+    <!-- 引入 GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- 引入 OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <title>Count test</title>
+    <link rel="icon" herf="/image/money.png" type="image/png" />
+  </head>
+  <body>
+    <div id="pageone">
+      <!--輸入數字-->
+      <section class="section-one">
+        <item class="firsttitle">
+          <p class="zh-h1">請填入數字</p>
+          <!-- h1>>>p-->
+        </item>
+
+        <!-- 輸入欄位-->
+        <div class="input-field zh-h2">
+          <label for="num1">數字 1：</label>
+          <input
+            type="number"
+            id="num1"
+            min="1"
+            max="1000"
+            placeholder="輸入數字"
+          />
+        </div>
+        <div class="input-field zh-h2">
+          <label for="num2">數字 2：</label>
+          <input
+            type="number"
+            id="num2"
+            min="1"
+            max="500"
+            placeholder="輸入數字"
+          />
+        </div>
+        <div class="input-field zh-h2">
+          <label for="num3">數字 3：</label>
+          <input
+            type="number"
+            id="num3"
+            min="1"
+            max="1000"
+            placeholder="輸入數字"
+          />
+        </div>
+
+        <!--計算按鈕-->
+        <button id="confirmButton">
+          <span class="zh-h3">計算</span>
+          <span class="en-h3">Confirm</span>
+        </button>
+      </section>
+
+      <!--數據結果區-->
+      <section class="section-two">
+        <!-- 顯示結果的欄位 -->
+        <div class="input-field zh-h2">
+          <label for="result">計算結果：</label>
+          <!-- <input type="number" id="result" readonly />-->
+          <span id="result"></span>
+        </div>
+        <!--顯示按鈕-->
+        <button id="showButton">
+          <span class="zh-h3">檢視</span>
+          <span class="en-h3">Preview</span>
+        </button>
+      </section>
+
+      <!--結果資訊圖表區-->
+      <section class="section-three">
+        <item class="step-text">
+          <p class="zh-h2">查看3D模型</p>
+        </item>
+
+        <!--產生圖片-->
+        <div class="image-container">
+          <img id="resultImage" src="image/counting.png" alt="Result Image" />
+        </div>
+
+        <!-- 渲染 Three.js 場景容器 -->
+        <div id="canvas-container"></div>
+      </section>
+    </div>
+    <!--網頁底部文字區
+   <section class="section-four">
+      <div class="down-text">
+        <p class="a-title-cn"><b>建議使用： </b>Chrome、Edge 瀏覽器</p>
+        <p class="a-title-cn"><b>最佳解析度：</b> 1920 x 1080 px</p>
+      </div>
+    <p class="a-title-en">Copyright©</p>
+   </section>-->
+
+    <footer>
+      <!--用來定義頁面的底部，通常包含版權信息、聯繫方式等內容。-->
+      <p>&copy; 2024 所有權利保留</p>
+    </footer>
+
+    <!--原點鼠標樣式point.js-->
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/point.js"></script>
+    <script type="module" src="js/script.js"></script>
+
+    <!-- 引入數據檔案 -->
+    <script src="js/data.js"></script>
+  </body>
+</html>
